@@ -7,7 +7,6 @@ import image from '../../images/fashion.png'
 
 import React from 'react'
 import { Stroke } from "blog"
-import { Abc } from "shop"
 
 
 //Three.js
@@ -20,6 +19,7 @@ import { Samsung } from "nlp"
 import { NaverMovie } from "naver_movie"
 import { UsersList } from "users"
 import { NaverMovieReview } from "imdb"
+import { Iris } from "iris"
 
 
 
@@ -44,7 +44,7 @@ const Home = () => {
                 <Route path="/login" element={<LoginForm/>}></Route>
                 <Route path="/signup" element={<SignUp/>}></Route>
                 <Route path="/stroke" element={<Stroke/>}></Route>
-                <Route path="/iris" element={<Abc/>}></Route>
+                <Route path="/iris" element={<Iris/>}></Route>
                 <Route path="/fashion" element={<Fashion/>}></Route>
                 <Route path="/number" element={<Number/>}></Route>
                 <Route path="/webcrawler" element={<Webcrawler/>}></Route>

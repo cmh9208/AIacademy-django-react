@@ -1,5 +1,4 @@
 import os
-
 import keras.datasets.fashion_mnist
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -13,17 +12,13 @@ class FashionModel(object):
     def __init__(self):
         pass
 
-
-
-
-
     def create_model(self):
         (train_images, train_labels), (test_images, test_labels) = keras.datasets.fashion_mnist.load_data()
-        # plt.figure()
-        # plt.imshow(train_images[10])
-        # plt.colorbar()
-        # plt.grid(False)
-        # plt.show()
+        plt.figure()
+        plt.imshow(train_images[10])
+        plt.colorbar()
+        plt.grid(False)
+        plt.show()
         model = Sequential([
             keras.layers.Flatten(input_shape=(28,28)),
             keras.layers.Dense(128, activation='relu'),
@@ -38,8 +33,6 @@ class FashionModel(object):
         file_name = os.path.join(os.path.abspath("save"), "fashion_model.h5")
         print(f"저장경로: {file_name}")
         model.save(file_name)
-
-
 
 
 iris_menu = ["Exit",  # 0

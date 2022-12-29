@@ -29,7 +29,7 @@ import time
 from os import path
 from collections import defaultdict
 from math import log, exp
-
+root = r"C:\Users\최민호\PycharmProjects\AIacademy-django-react\djangoProject"
 ### embedding ###
 class ImdbService(object):
     def __init__(self):
@@ -74,48 +74,13 @@ class ImdbService(object):
                 print(f'{(1 - result) * 100} 확률로 부정 리뷰 입니다.')
 
 
-        # print(f"예측한 답 : {result}")
-        #
-        # if result == 0:
-        #     resp = '부정'
-        # elif result == 1:
-        #     resp = '긍정'
-        # print(f"해당 리뷰는 '{resp}'적인 리뷰 입니다.")
-        # return resp
-
-##########################################################################################################################
-    # def service_model2(self) -> '':
-    #     model = load_model(r"C:\Users\최민호\PycharmProjects\django-react-AIA\djangoProject\imdb\best-embedding-model.h5")
-    #
-    #
-    #     test_sentence = '우와.. 진짜 완전 노잼이다'
-    #     test_sentence = test_sentence.split(' ')
-    #     test_sentences = []
-    #     now_sentence = []
-    #     for word in test_sentence:
-    #         now_sentence.append(word)
-    #         test_sentences.append(now_sentence[:])
-    #
-    #     test_X_1 = tokenizer.texts_to_sequences(test_sentences)
-    #     test_X_1 = pad_sequences(test_X_1, padding='post', maxlen=25)
-    #     predictions = model.predict(test_X_1)
-    #     for idx, sentence in enumerate(test_sentences):
-    #         print(sentence)
-    #         print(predictions[idx])
-################################################################################
-
 class NaverMovieService(object):
     def __init__(self):
         global url, driver, file_name, encoding, review_train, k, dr
         url = 'https://movie.naver.com/movie/point/af/list.naver?&page='
-        dr = r'C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\webcrawler\chromedriver.exe'
-        file_name = r'C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\imdb\naver_movie_review_corpus.csv'
-        review_train = r'C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\imdb\review_train.csv'
-
-        # dr = os.path.join(os.getcwd(), 'chromedriver.exe')
-        # file_name = os.path.join(os.getcwd(), 'data/naver_movie_review_corpus.csv')
-        # review_train = os.path.join(os.getcwd(), 'data/review_train.csv')
-
+        dr = os.path.join(root, "imdb", "data", "chromedriver.exe")
+        file_name = os.path.join(root, "imdb", "save", "naver_movie_review_corpus.csv")
+        review_train = os.path.join(root, "imdb", "data", "review_train.csv")
         encoding = "UTF-8"
         self.word_probs = []
         k=0.5

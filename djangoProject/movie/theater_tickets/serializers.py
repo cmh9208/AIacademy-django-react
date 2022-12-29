@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import MovieTheaterTicket
+from .models import MovieTheaterTicket
 
 class MovieTheaterTicketSerializer(serializers.ModelSerializer):
     class Meta:

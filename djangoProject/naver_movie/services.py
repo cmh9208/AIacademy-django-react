@@ -1,26 +1,23 @@
 import csv
 import os.path
-
 import pandas as pd
 from selenium import webdriver
-
 from webcrawler.models import ScrapVO
 import urllib.request
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
+root = r"C:\Users\최민호\PycharmProjects\AIacademy-django-react\djangoProject"
 
 class ScrapService(ScrapVO):
 
     def __init__(self):
         global driverpath, naver_url, savepath, encoding
-        driverpath = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\webcrawler\chromedriver.exe"
-        savepath = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\naver_movie\naver_movie.csv"
+        driverpath = os.path.join(root, "naver_movie", "chromedriver.exe")
+        savepath = os.path.join(root, "naver_movie", "save", "naver_movie.csv")
         # 파일명 없으면 Permission Error 발생
         naver_url = "https://movie.naver.com/movie/sdb/rank/rmovie.naver"
         encoding = "UTF-8"
-
-
 
     def naver_movie_review(self):
         if os.path.isfile(savepath) == False:
@@ -38,11 +35,6 @@ class ScrapService(ScrapVO):
             # 프론트요구사항: 순위 rank, 제목 title 로 변경해서 리턴할 것
             result = [{'rank': f"{i+1}", 'title': f"{j}"} for i, j in enumerate(df)]
             return result
-
-
-
-
-
 
     #
     # def bugs_music(self, arg): # BeautifulSoup 기본크롤링
@@ -80,13 +72,6 @@ class ScrapService(ScrapVO):
     #     arg.diction = diction
     #     arg.dict_to_dataframe()
     #     arg.dataframe_to_csv()  # csv파일로 저장
-    #
-    #
-    #
-
-
-
-
 
 music_menus = ["Exit", #0
                 "BugsMusic",#1

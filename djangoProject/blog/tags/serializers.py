@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import BlogTag
+from .models import BlogTag
 
 class BlogTagSerializer(serializers.ModelSerializer):
     class Meta:

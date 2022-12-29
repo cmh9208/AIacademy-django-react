@@ -19,7 +19,7 @@ class FashionService(object):
 
     # self, i, predictions_array, true_label, img
     def service_model(self, i) -> '':
-        model = load_model(r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fashion\save\fashion_model.h5")
+        model = load_model(os.path.join(r"C:\Users\최민호\PycharmProjects\AIacademy-django-react\djangoProject", "fashion", "save", "fashion_model.h5"))
         (train_images, train_labels), (test_images, test_labels) = keras.datasets.fashion_mnist.load_data()
         predictions = model.predict(test_images)
         predictions_array, true_label, img = predictions[i], test_labels[i], test_images[i]
@@ -67,9 +67,6 @@ class FashionService(object):
         print(f"패션 서비스에서 예측한 값: {resp}")
         return resp
 
-
-
-
     @staticmethod
     def plot_value_array(i, predictions_array, true_label):
         predictions_array, true_label = \
@@ -85,27 +82,25 @@ class FashionService(object):
         thisplot[predicted_label].set_color('red')
         thisplot[true_label].set_color('blue')
 
-
-
-iris_menu = ["Exit",  # 0
+fashion_menu = ["Exit",  # 0
                "Learning",  # 1
                ]
 
-iris_lambda = {
+fashion_lambda = {
     "1": lambda x: x.service_model(),
     }
 
 if __name__ == '__main__':
     ir = FashionService()
     while True:
-        [print(f"{i}. {j}") for i, j in enumerate(iris_menu)]
+        [print(f"{i}. {j}") for i, j in enumerate(fashion_menu)]
         menu = input('메뉴선택: ')
         if menu == '0':
             print("종료")
             break
         else:
             try:
-                iris_lambda[menu](ir)
+                fashion_lambda[menu](ir)
             except:
 
                 print("Didn't catch error message")

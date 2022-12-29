@@ -58,7 +58,7 @@ dtypes: float64(1), int64(5), object(6)
 class MpgService:
 
     def __init__(self):
-        self.mpg = pd.read_csv('data/mpg.csv')
+        self.mpg = pd.read_csv('../ddddddddddddddddd/data/mpg.csv')
         self.my_mpg = None
 
     '''

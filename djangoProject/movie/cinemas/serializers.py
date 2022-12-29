@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import MovieCinema
+from .models import MovieCinema
 
 class MovieCinemaSerializer(serializers.ModelSerializer):
     class Meta:
