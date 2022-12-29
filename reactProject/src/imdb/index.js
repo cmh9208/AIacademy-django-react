@@ -1,0 +1,1 @@
+export {default as NaverMovieReview} from 'imdb/components/NaverMovieReview'

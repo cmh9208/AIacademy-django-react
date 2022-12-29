@@ -1,0 +1,34 @@
+version:  '3'
+
+services:
+  database:
+    image: mysql
+    container_name: mydb
+    volumes:
+      - /opt/mydb/mysql_data:/var/lib/mysql
+      - /tmp/mydb/mysqld:/var/run/mysqld
+    environment:
+      - MYSQL_DATABASE=mydb
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_HOST=%
+    command: [ '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+    ports:
+      - 3306:3306
+
+  backend:
+    image: cwh920625dj:v1
+    build: .
+    container_name: cwh920625dj
+    stdin_open: true
+    tty: true
+    command: python manage.py runserver 0:8000
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/cwh920625dj
+      - /tmp/mydb/mysqld:/run/mysqld
+    expose:
+      - "8000"
+    restart: always
+    depends_on:
+      - database

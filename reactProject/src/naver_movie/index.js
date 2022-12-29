@@ -1,0 +1,1 @@
+export {default as NaverMovie} from 'naver_movie/components/NaverMovie'

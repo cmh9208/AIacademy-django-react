@@ -1,0 +1,1 @@
+export {default as Fashion} from 'fashion/components/Fashion'
