@@ -14,6 +14,10 @@ class BuserService(object):
                   if_exists='append',
                   con = engine,
                   index=False)
+
+    def get_busers(self):
+        print("성공")
+
     def frame_create(self):
         n = 5
         email = ''
@@ -37,7 +41,7 @@ class BuserService(object):
         return df
 if __name__ == '__main__':
     s =BuserService()
-    s.create_users() # 만듬 이미 돌리지마
+    s.create_users()
 
 
 #

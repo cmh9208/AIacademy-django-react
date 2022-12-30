@@ -3,7 +3,7 @@
 import axios from 'axios'
 const server = `http://localhost:8000`
 
-export const userLogin = req => axios.post(`${server}/blog/auth/login`, req)
+export const userLogin = req => axios.post(`${server}/users/login`, req)
 
 
 // export const userLogin = req => axios.post(`http://localhost:8000/blog/auth/login`, req)
@@ -29,7 +29,7 @@ function handleResponse(response){
     }
     
 async function blogPost(){
-    const res = await fetch(`${server}/blog/auth/signup`)
+    const res = await fetch(`${server}/users/signup`)
     .then(handleResponse)
     .then(data => JSON.stringify(data))
     .catch((error) => {

@@ -18,6 +18,8 @@ const SignUp = () => {
         BlogService.blogPost(email, nickname, password)
         let arr = document.getElementsByClassName('box')
         for(let i=0; i<arr.length; i++) arr[i].value = ""
+        // alert(`사용자 이름: ${JSON.stringify(request)}`)
+        
     }
 
     return (<>

@@ -115,11 +115,11 @@ export default function LoginForm(){
         .then((res)=>{
 
             
-            // 들어온 값 저장 키,벨류 구조 여기선 스트링 값으로 저장
-            localStorage.setItem("loginUser", JSON.stringify(res.data))
-            alert(`로컬스토리지에 저장된 정보: ${localStorage.getItem("loginUser")}`)
-            // root경로"/" 로그인 하면 홈으로 가도록
-            navigate("/home")
+        // 들어온 값 저장 키,벨류 구조 여기선 스트링 값으로 저장
+        localStorage.setItem("loginUser", JSON.stringify(res.data))
+        alert(`로컬스토리지에 저장된 정보: ${localStorage.getItem("loginUser")}`)
+        // root경로"/" 로그인 하면 홈으로 가도록
+        navigate("/home")
             
         })
         .catch((err)=>{

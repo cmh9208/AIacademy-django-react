@@ -7,7 +7,6 @@ import { iris } from '../api'
 const Iris = () => {
   const [inputs, setInputs] = useState({})
   const {petal_width, petal_length, sepal_width, sepal_length} = inputs;
-  
 
   const onChange = e => {
       e.preventDefault()
@@ -37,7 +36,6 @@ const Iris = () => {
       sepal_width: <input type="text" name="sepal_width" onChange={onChange} /><br/>
       sepal_length: <input type="text" name="sepal_length" onChange={onChange} /><br/>
       <button onClick={onClick}> 확인 </button>
- 
   </>
 )}
 export default Iris

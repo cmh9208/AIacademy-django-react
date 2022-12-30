@@ -44,7 +44,7 @@ export default function UserList(){
     useEffect(()=>{
         // alert('2')
         axios
-        .get('http://localhost:8000/users/user-list')
+        .get('http://localhost:8000/users/list')
         .then(res => {
             console.log(" 회원목록 들어옴 ")
             console.log(res.data)
