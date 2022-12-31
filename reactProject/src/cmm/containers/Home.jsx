@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import {Navigation2, Counter, Footer} from "cmm"
 import {Schedule} from "cop"
-import {LoginForm, SignUp} from "uat"
 import image from '../../images/fashion.png'
 
 
@@ -17,32 +16,31 @@ import { Number } from "number"
 import { Webcrawler } from "webcrawler"
 import { Samsung } from "nlp"
 import { NaverMovie } from "naver_movie"
-import { UsersList } from "users"
 import { NaverMovieReview } from "imdb"
 import { Iris } from "iris"
+import { Login, SignUp, UserList } from "users"
 
-
+// style={{textAlign: "center"}}
 
 const Home = () => {
     const imageSize = {width: 700, height: 500}
     return (<>
     <table style={{ width: "1200px", height: "550px", margin: "0 auto", border: "1px solid black"}}>
         <thead>
-            <tr columns="3" >
+            <tr columns="7">
                 <td style={{ width: "100%", height: "150px", border: "1px solid black"}}>
                     <Navigation2/>
                 </td>
             </tr>
         </thead>
         <tbody>
-        <tr style={{ width: "20%", height: "80%",  border: "1px solid black"}}>
+        <tr style={{ width: "20%", height: "80%",  border: "1px solid black", }}>
             <td style={{ width: "100%", border: "1px solid black"}}>
             <Routes>
                 <Route path="/counter" element={<Counter/>}></Route>
                 <Route path="/counter" element={<Counter/>}></Route>
                 <Route path="/todos" element={<Schedule/>}></Route>
-                <Route path="/login" element={<LoginForm/>}></Route>
-                <Route path="/signup" element={<SignUp/>}></Route>
+                
                 <Route path="/stroke" element={<Stroke/>}></Route>
                 <Route path="/iris" element={<Iris/>}></Route>
                 <Route path="/fashion" element={<Fashion/>}></Route>
@@ -50,8 +48,11 @@ const Home = () => {
                 <Route path="/webcrawler" element={<Webcrawler/>}></Route>
                 <Route path="/samsung" element={<Samsung/>}></Route>
                 <Route path="/naver" element={<NaverMovie/>}></Route>
-                <Route path="/users" element={<UsersList/>}></Route>
                 <Route path="/imdb" element={<NaverMovieReview/>}></Route>
+
+                <Route path="/login" element={<Login/>}></Route>
+                <Route path="/signup" element={<SignUp/>}></Route>
+                <Route path="/list" element={<UserList/>}></Route>
             </Routes>
             
             </td>

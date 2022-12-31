@@ -22,7 +22,6 @@ urlpatterns = [
 
     path('', hello),
     # path("blog/buser/", include('blog.buser.urls')),
-    path("mplex/movies/", include('movie.movies.urls')),
     path("st/", include('st.urls')),
     path("ir/", include('ir.urls')),
     path("fashion/", include('fashion.urls')),
@@ -33,6 +32,23 @@ urlpatterns = [
     path("naver_movie/", include('naver_movie.urls')),
     path("users/", include('users.urls')),
     path("imdb/", include('imdb.urls')),
+
+    path("blog/comments/", include('blog.comments.urls')),
+    path("blog/posts/", include('blog.posts.urls')),
+    path("blog/tags/", include('blog.tags.urls')),
+    path("blog/views/", include('blog.views.urls')),
+
+    path("multiplex/cinemas/", include('multiplex.cinemas.urls')),
+    path("multiplex/movies/", include('multiplex.movies.urls')),
+    path("multiplex/showtimes/", include('multiplex.showtimes.urls')),
+    path("multiplex/theater_tickets/", include('multiplex.theater_tickets.urls')),
+    path("multiplex/theaters/", include('multiplex.theaters.urls')),
+
+    path("shop/carts/", include('multiplex.movies.urls')),
+    path("shop/categories/", include('shop.categories.urls')),
+    path("shop/deliveries/", include('shop.deliveries.urls')),
+    path("shop/orders/", include('shop.orders.urls')),
+    path("shop/products/", include('shop.products.urls')),
 
 
 

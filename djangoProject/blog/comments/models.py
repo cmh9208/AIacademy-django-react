@@ -10,7 +10,7 @@ from blog.posts.models import BlogPost
 class BlogComment(models.Model):
     use_in_migration = True
     comment_id = models.AutoField(primary_key=True)
-    content = models.TextField()
+    content = models.CharField(max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     parent_id = models.TextField(null=True)

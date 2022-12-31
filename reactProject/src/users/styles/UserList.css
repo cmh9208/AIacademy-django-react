@@ -1,0 +1,20 @@
+table.user-list {
+    width: 80%;
+    margin-left:10px;
+    border-collapse:separate;
+    border-spacing: 3px;
+    margin:auto;
+ }
+table.user-list th{
+    text-align:center;
+    font-weight: bold;
+    border:double 3px rgb(255, 255, 255);
+    width:150;
+    background:rgb(144, 223, 205);
+}
+table.user-list td{
+    text-align:center;
+    border:2px solid rgb(224, 216, 216);
+    width:100;
+    background: #eee;
+}

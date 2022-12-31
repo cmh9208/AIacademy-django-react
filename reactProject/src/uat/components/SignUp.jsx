@@ -23,7 +23,7 @@ const SignUp = () => {
     }
 
     return (<>
-        <h2> 회원가입 </h2>
+        <h2 > 회원가입 </h2>
         E-MAIL: <input type="text" name="email" onChange={onChange}/><br/>
         NICKNAME: <input type="text" name="nickname" onChange={onChange}/><br/>
         PASSWORD: <input type="text" name="password" onChange={onChange}/><br/>

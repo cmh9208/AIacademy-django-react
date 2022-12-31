@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 from sklearn import datasets
 from sklearn.preprocessing import OneHotEncoder
 import os
-
+root = r"C:\Users\최민호\PycharmProjects\AIacademy-django-react\djangoProject"
 from tensorflow import keras
 
 class FashionService(object):
@@ -19,7 +19,7 @@ class FashionService(object):
 
     # self, i, predictions_array, true_label, img
     def service_model(self, i) -> '':
-        model = load_model(os.path.join(r"C:\Users\최민호\PycharmProjects\AIacademy-django-react\djangoProject", "fashion", "save", "fashion_model.h5"))
+        model = load_model(os.path.join(root, "fashion", "save", "fashion_model.h5"))
         (train_images, train_labels), (test_images, test_labels) = keras.datasets.fashion_mnist.load_data()
         predictions = model.predict(test_images)
         predictions_array, true_label, img = predictions[i], test_labels[i], test_images[i]

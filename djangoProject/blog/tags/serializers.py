@@ -1,7 +1,17 @@
 from rest_framework import serializers
-from .models import BlogTag
+from .models import BlogTag as tag
 
-class BlogTagSerializer(serializers.ModelSerializer):
+
+class TagSerializer(serializers.ModelSerializer):
     class Meta:
-        model = BlogTag
+        model = tag
         fields = '__all__'
+
+    def create(self, validated_data):
+        return tag.objects.create(**validated_data)
+
+    def update(self, instance, valicated_data):
+        tag.objects.filter(pk=instance.id).update(**valicated_data)
+
+    def delete(self, instance, valicated_data):
+        pass

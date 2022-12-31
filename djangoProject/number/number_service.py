@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 from sklearn import datasets
 from sklearn.preprocessing import OneHotEncoder
 import os
-
+root = r"C:\Users\최민호\PycharmProjects\AIacademy-django-react\djangoProject"
 from tensorflow import keras
 
 class NumberService(object):
@@ -19,7 +19,7 @@ class NumberService(object):
 
     # self, i, predictions_array, true_label, img
     def service_model(self, i) -> '':
-        model = load_model(r"C:\Users\AIA\PycharmProjects\djangoProject\number\save\number_model.h5")
+        model = load_model(os.path.join(root, "number", "save", "number_model.h5"))
         (train_images, train_labels), (test_images, test_labels) = keras.datasets.mnist.load_data()
 
         x_train, x_test = train_images / 255.0, test_images / 255.0

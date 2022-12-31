@@ -11,7 +11,7 @@ from blog.posts.models import BlogPost
 class BlogView(models.Model):
     use_in_migration = True
     view_id = models.AutoField(primary_key=True)
-    title = models.TextField()
+    title = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
 
     blog_user = models.ForeignKey(BlogBuser, on_delete=models.CASCADE)

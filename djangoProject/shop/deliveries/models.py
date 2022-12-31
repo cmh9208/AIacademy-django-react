@@ -8,10 +8,10 @@ from shop.suser.models import ShopSuser
 class ShopDelivery(models.Model):
     use_in_migration = True
     delivery_id = models.AutoField(primary_key=True)
-    username = models.TextField()
-    address = models.TextField()
-    detail_address = models.TextField()
-    phone = models.TextField()
+    username = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    detail_address = models.CharField(max_length=100)
+    phone = models.CharField(max_length=100)
 
     shop_user = models.ForeignKey(ShopSuser, on_delete=models.CASCADE)
 

@@ -9,7 +9,7 @@ from blog.posts.models import BlogPost
 class BlogTag(models.Model):
     use_in_migration = True
     tag_id = models.AutoField(primary_key=True)
-    title = models.TextField()
+    title = models.CharField(max_length=100)
 
     blog_post = models.ForeignKey(BlogPost, on_delete=models.CASCADE)
 

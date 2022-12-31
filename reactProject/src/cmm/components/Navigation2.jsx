@@ -22,8 +22,6 @@ const Navigation2 = () => {
         <Link to="/home" style={{width:50, margin:10}}>Home</Link>
         <Link to="/counter" style={{width:50, margin:10}}>Counter</Link>
         <Link to="/todos" style={{width:50, margin:10}}>Todos</Link>
-        <Link to="/signup" style={{width:50, margin:10}}>SignUP</Link>
-        <Link to="/login" style={{width:50, margin:10}}>Login</Link>
         <Link to="/stroke" style={{width:30, margin:10}}>뇌졸증</Link>
         <Link to="/iris" style={{width:30, margin:10}}>아이리스</Link>
         <Link to="/fashion" style={{width:30, margin:10}}>패션</Link>
@@ -31,8 +29,12 @@ const Navigation2 = () => {
         <Link to="/webcrawler" style={{width:30, margin:10}}>크롤러</Link>
         <Link to="/samsung" style={{width:30, margin:10}}>삼성</Link>
         <Link to="/naver" style={{width:30, margin:10}}>네이버</Link>
-        <Link to="/users" style={{width:30, margin:10}}>유저</Link>
-        <Link to="/imdb" style={{width:30, margin:10}}>imdb</Link>
+        <Link to="/imdb" style={{width:30, margin:10}}>리뷰 분석</Link>
+
+        
+        <Link to="/login" style={{width:50, margin:10}}>로그인</Link>
+        <Link to="/signup" style={{width:50, margin:10}}>회원가입</Link>
+        <Link to="/list" style={{width:30, margin:10}}>유저목록</Link>
       </BottomNavigation>
     </Box>
   );
