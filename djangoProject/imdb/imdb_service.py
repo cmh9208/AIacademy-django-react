@@ -30,37 +30,18 @@ from os import path
 from collections import defaultdict
 from math import log, exp
 root = r"C:\Users\최민호\PycharmProjects\AIacademy-django-react\djangoProject"
-### embedding ###
+
+
 class ImdbService(object):
     def __init__(self):
         pass
-    def embedding_service_model(self) -> '':
+    def imdb_service_model(self) -> '':
         # i = 53
-        model = load_model(r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\imdb\best-embedding-model.h5")
+
+        model = load_model(os.path.join(root, "imdb", "save", "best-rstm-model.h5"))
         (train_input, train_target), (test_input, test_target) = keras.datasets.imdb.load_data(num_words=500)
         test_seq = pad_sequences(test_input, maxlen=100) # test_input을 임베딩 방식 fit에 쓰인 train_input과 같이 만들어줌
         predictions = model.predict(test_seq)
-
-        # result = np.argmax(predictions[i]) # 소수점으로 나오는 답을 정수로
-        j = 0
-        for i in range(20):
-            result = predictions[j]
-            print(f'{j}번 리뷰는')
-            j += 1
-            if result > 0.5:
-                print(f'{result * 100} 확률로 긍정 리뷰 입니다.')
-            else:
-                print(f'{(1 - result) * 100} 확률로 부정 리뷰 입니다.')
-
-    ### simplernn ###
-    def simplernn_service_model(self) -> '':
-        # i = 53
-        model = load_model(
-            r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\imdb\best-simplernn-model.h5")
-        (train_input, train_target), (test_input, test_target) = keras.datasets.imdb.load_data(num_words=500)
-        test_seq = pad_sequences(test_input, maxlen=100)  # test_input을 임베딩 방식 fit에 쓰인 train_input과 같이 만들어줌
-        test_oh = keras.utils.to_categorical(test_seq)
-        predictions = model.predict(test_oh)
 
         # result = np.argmax(predictions[i]) # 소수점으로 나오는 답을 정수로
         j = 0
@@ -179,13 +160,11 @@ class NaverMovieService(object):
 #     print(f'{result * 100} 확률로 긍정 리뷰 입니다.')
 
 imdb_menu = ["Exit",  # 0
-               "embedding",  # 1
-               "simplernn",  # 2
+               "imdb",  # 1
                ]
 
 imdb_lambda = {
-    "1": lambda x: x.embedding_service_model(),
-    "2": lambda x: x.simplernn_service_model(),
+    "1": lambda x: x.imdb_service_model(),
     }
 
 if __name__ == '__main__':

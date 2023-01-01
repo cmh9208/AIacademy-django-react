@@ -1,4 +1,4 @@
-from dataset import Dataset
+from mlearn.dataset import Dataset
 
 class BicycleModel(object):
 

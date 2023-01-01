@@ -8,7 +8,8 @@ from mlearn.dataset import Dataset
 import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib import font_manager, rc
-font_path = "C:/Windows/Fonts/malgunbd.ttf"
+# font_path = "C:/Windows/Fonts/malgunbd.ttf"
+font_path = "C:/Windows/Fonts/HMKMP.TTF"
 font = font_manager.FontProperties(fname=font_path).get_name()
 rc('font', family=font)
 """

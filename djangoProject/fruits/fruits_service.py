@@ -25,6 +25,7 @@ from keras.layers import Conv2D
 from tensorflow import keras
 from keras.callbacks import ModelCheckpoint
 
+root = r"C:\Users\최민호\PycharmProjects\AIacademy-django-react\djangoProject"
 
 class FruitsService(object):
     def __init__(self):
@@ -32,20 +33,20 @@ class FruitsService(object):
             Test_Apple_Braeburn, Test_Apple_Crimson_Snow, Test_Apple_Golden1, Test_Apple_Golden2, Test_Apple_Golden3, train_data_dir, test_data_dir
 
 
-        Train_Apple_Braeburn = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\train\Apple Braeburn"
-        Train_Apple_Crimson_Snow = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\train\Apple Crimson Snow"
-        Train_Apple_Golden1 = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\train\Apple Golden 1"
-        Train_Apple_Golden2 = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\train\Apple Golden 2"
-        Train_Apple_Golden3 = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\train\Apple Golden 3"
+        Train_Apple_Braeburn = os.path.join(root, "fruits", "train", "Apple Braeburn")
+        Train_Apple_Crimson_Snow = os.path.join(root, "fruits", "train", "Apple Crimson Snow")
+        Train_Apple_Golden1 = os.path.join(root, "fruits", "train", "Apple Golden 1")
+        Train_Apple_Golden2 = os.path.join(root, "fruits", "train", "Apple Golden 2")
+        Train_Apple_Golden3 = os.path.join(root, "fruits", "train", "Apple Golden 3")
 
-        Test_Apple_Braeburn = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\test\Apple Braeburn"
-        Test_Apple_Crimson_Snow = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\test\Apple Crimson Snow"
-        Test_Apple_Golden1 = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\test\Apple Golden 1"
-        Test_Apple_Golden2 = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\test\Apple Golden 2"
-        Test_Apple_Golden3 = r"C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\test\Apple Golden 3"
+        Test_Apple_Braeburn = os.path.join(root, "fruits", "test", "Apple Braeburn")
+        Test_Apple_Crimson_Snow = os.path.join(root, "fruits", "test", "Apple Crimson Snow")
+        Test_Apple_Golden1 = os.path.join(root, "fruits", "test", "Apple Golden 1")
+        Test_Apple_Golden2 = os.path.join(root, "fruits", "test", "Apple Golden 2")
+        Test_Apple_Golden3 = os.path.join(root, "fruits", "test", "Apple Golden 3")
 
-        train_data_dir = r'C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\train'
-        test_data_dir = r'C:\Users\AIA\PycharmProjects\django-react-AIA\djangoProject\fruits\test'
+        train_data_dir = os.path.join(root, "fruits", "train")
+        test_data_dir = os.path.join(root, "fruits", "test")
 
 
 
@@ -244,11 +245,6 @@ class FruitsService(object):
             "This image most likely belongs to {} with a {:.2f} percent confidence."
             .format(class_names[np.argmax(score)], 100 * np.max(score))
         )
-
-
-
-
-
 
 
 iris_menu = ["Exit",  # 0

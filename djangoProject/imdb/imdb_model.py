@@ -22,13 +22,6 @@ class ImdbModel(object):
             train_oh, val_oh,\
             lengths
 
-    def hook(self):
-        self.data_processing()
-        self.one_hot_learning()
-        self.embedding_learning()
-        self.rstm_learning()
-
-    def data_processing(self):
         (train_input, train_target), (test_input, test_target) = keras.datasets.imdb.load_data(num_words=500)
 
         train_input, val_input, train_target, val_target = train_test_split(
@@ -42,6 +35,11 @@ class ImdbModel(object):
         train_oh = keras.utils.to_categorical(train_seq)
         val_oh = keras.utils.to_categorical(val_seq)  # 검증 데이터도 원핫 인코딩
 
+    def hook(self):
+        # self.one_hot_learning()
+        # self.embedding_learning()
+        self.rstm_learning()
+
     # 원핫 인코딩 순환 신경망
     def one_hot_learning(self):
         model = keras.Sequential()
@@ -52,7 +50,7 @@ class ImdbModel(object):
 
         rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
         model.compile(optimizer=rmsprop, loss='binary_crossentropy', metrics=['accuracy'])
-        checkpoint_cb = keras.callbacks.ModelCheckpoint('best-simplernn-model.h5', save_best_only=True)
+        checkpoint_cb = keras.callbacks.ModelCheckpoint('./save/best-simplernn-model.h5', save_best_only=True)
         early_stopping_cb = keras.callbacks.EarlyStopping(patience=3, restore_best_weights=True)
         history = model.fit(train_oh, train_target, epochs=100, batch_size=64, validation_data=(val_oh, val_target),
                             callbacks=[checkpoint_cb, early_stopping_cb])
@@ -64,6 +62,10 @@ class ImdbModel(object):
         plt.legend(['train', 'val'])
         plt.show()
 
+        # Epoch 37 / 100
+        # 313 / 313[ == == == == == == == == == == == == == == ==] - 7s 22ms / step - loss: 0.4317 -
+        # accuracy: 0.8090 - val_loss: 0.4706 - val_accuracy: 0.7834
+
     # 단어 임베딩 (원핫코딩 단점 보완)
     def embedding_learning(self):
         model2 = keras.Sequential()
@@ -74,7 +76,7 @@ class ImdbModel(object):
 
         rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
         model2.compile(optimizer=rmsprop, loss='binary_crossentropy', metrics=['accuracy'])
-        checkpoint_cb = keras.callbacks.ModelCheckpoint('best-embedding-model.h5', save_best_only=True)
+        checkpoint_cb = keras.callbacks.ModelCheckpoint('./save/best-embedding-model.h5', save_best_only=True)
         early_stopping_cb = keras.callbacks.EarlyStopping(patience=3, restore_best_weights=True)
         history2 = model2.fit(train_seq, train_target, epochs=100, batch_size=64, validation_data=(val_seq, val_target),
                               callbacks=[checkpoint_cb, early_stopping_cb])
@@ -86,6 +88,10 @@ class ImdbModel(object):
         plt.legend(['train', 'val'])
         plt.show()
 
+        # Epoch 31 / 100
+        # 313 / 313[ == == == == == == == == == == == == == == ==] - 2s 8ms / step - loss: 0.3862 -
+        # accuracy: 0.8352 - val_loss: 0.4573 - val_accuracy: 0.7936
+
     # RSTM
     def rstm_learning(self):
         model3 = keras.Sequential()
@@ -96,7 +102,7 @@ class ImdbModel(object):
 
         rmsprop = keras.optimizers.RMSprop(learning_rate=1e-4)
         model3.compile(optimizer=rmsprop, loss='binary_crossentropy', metrics=['accuracy'])
-        checkpoint_cb = keras.callbacks.ModelCheckpoint('best-embedding-model.h5', save_best_only=True)
+        checkpoint_cb = keras.callbacks.ModelCheckpoint('./save/best-rstm-model.h5', save_best_only=True)
         early_stopping_cb = keras.callbacks.EarlyStopping(patience=3, restore_best_weights=True)
         history3 = model3.fit(train_seq, train_target, epochs=100, batch_size=64, validation_data=(val_seq, val_target),
                               callbacks=[checkpoint_cb, early_stopping_cb])
@@ -107,6 +113,10 @@ class ImdbModel(object):
         plt.ylabel('loss')
         plt.legend(['train', 'val'])
         plt.show()
+
+        # Epoch 33 / 100
+        # 313 / 313[ == == == == == == == == == == == == == == ==] - 5s 15ms / step - loss: 0.4056 -
+        # accuracy: 0.8150 - val_loss: 0.4346 - val_accuracy: 0.7976
 
     def data_check(self):
         print(train_input.shape, test_input.shape)
