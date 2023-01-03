@@ -1,0 +1,1 @@
+export {default as Korean} from 'korean/components/Korean'

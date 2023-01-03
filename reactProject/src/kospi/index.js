@@ -1,0 +1,1 @@
+export {default as Kospi} from 'kospi/components/Kospi'

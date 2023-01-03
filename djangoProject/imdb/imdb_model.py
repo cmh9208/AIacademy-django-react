@@ -38,7 +38,8 @@ class ImdbModel(object):
     def hook(self):
         # self.one_hot_learning()
         # self.embedding_learning()
-        self.rstm_learning()
+        # self.rstm_learning()
+        self.data_check()
 
     # 원핫 인코딩 순환 신경망
     def one_hot_learning(self):

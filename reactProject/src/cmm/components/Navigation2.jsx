@@ -30,6 +30,8 @@ const Navigation2 = () => {
         <Link to="/samsung" style={{width:30, margin:10}}>삼성</Link>
         <Link to="/naver" style={{width:30, margin:10}}>네이버</Link>
         <Link to="/imdb" style={{width:30, margin:10}}>리뷰 분석</Link>
+        <Link to="/korean" style={{width:30, margin:10}}>언어감지</Link>
+        <Link to="/aitrader" style={{width:30, margin:10}}>삼성주식</Link>
 
         
         <Link to="/login" style={{width:50, margin:10}}>로그인</Link>

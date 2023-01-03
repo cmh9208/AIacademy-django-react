@@ -4,6 +4,7 @@ import { userLogin } from '../api'
 import { useNavigate  } from "react-router-dom"
 
 export default function LoginForm(){
+    // const [<상태 값 저장 변수>, <상태 값 갱신 함수>] = useState(<상태 초기 값>);
     const [inputs, setInputs] = useState({})
     const {user_email, password} = inputs;
     const navigate = useNavigate()

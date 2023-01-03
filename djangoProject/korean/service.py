@@ -10,6 +10,7 @@ from matplotlib import pyplot as plt
 
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import OneHotEncoder
 import os
 import csv
@@ -34,6 +35,21 @@ root = r"C:\Users\최민호\PycharmProjects\AIacademy-django-react\djangoProject
 class ImdbService(object):
     def __init__(self):
         pass
+
+
+
+
+    @staticmethod
+    def count_codePoint(str):
+        counter = np.zeros(65535)
+        for i in range(len(str)):
+            code_point = ord(str[i])
+            if code_point > 65535:
+                continue
+            counter[code_point] += 1
+            counter = counter / len
+
+
     def imdb_service_model(self) -> '':
 
         model = load_model(os.path.join(root, "imdb", "save", "best-rstm-model.h5"))

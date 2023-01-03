@@ -1,19 +1,20 @@
 import os
 import numpy as np
 import pandas as pd
-from matplotlib import font_manager, rc
+from matplotlib import font_manager
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import OrdinalEncoder
+
 from imblearn.under_sampling import RandomUnderSampler
+from sklearn.preprocessing import OrdinalEncoder
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import GridSearchCV
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-font_path = "C:/Windows/Fonts/HMKMS.TTF"
+font_path = "C:/Windows/Fonts/HMFMPYUN.TTF"
 font = font_manager.FontProperties(fname=font_path).get_name()
-rc('font', family=font)
+plt.rc('font', family=font)
 
 
 stroke_meta = {

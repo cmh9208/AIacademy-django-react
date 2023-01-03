@@ -32,6 +32,8 @@ urlpatterns = [
     path("naver_movie/", include('naver_movie.urls')),
     path("users/", include('users.urls')),
     path("imdb/", include('imdb.urls')),
+    path("korean/", include('korean.urls')),
+    path("aitrader/", include('aitrader.urls')),
 
     path("blog/comments/", include('blog.comments.urls')),
     path("blog/posts/", include('blog.posts.urls')),

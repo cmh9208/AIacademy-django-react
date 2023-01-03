@@ -55,4 +55,4 @@ wordcloud
 dataclasses==0.6
 torchvision
 opencv-python~=4.6.0.66
-
+yfinance==0.2.3
