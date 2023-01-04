@@ -25,14 +25,14 @@ const Kospi = () => {
     <form method="post">
     <h1>삼성 주가 예측 POST</h1>
     <p>예측 일을 입력해 주세요.</p>
-    <input type="text" className="box" placeholder="테스트할 옷 번호" name="id" onChange={onChange}/>
+    <input type="text" className="box" placeholder="날짜" name="id" onChange={onChange}/>
     <button onClick={onPostClick}>옷의 카테고리 찾기</button>
     </form>
 
     <form method="get">
     <h1>삼성 주가 예측 GET</h1>
     <p>예측 일을 입력해 주세요.</p>
-    <input type="text" className="box" placeholder="테스트할 옷 번호" name="id" onChange={onChange}/>
+    <input type="text" className="box" placeholder="날짜" name="id" onChange={onChange}/>
     <button onClick={onGetClick}>옷의 카테고리 찾기</button>
     </form>
     </>)

@@ -21,6 +21,7 @@ import { Iris } from "iris"
 import { Login, SignUp, UserList } from "users"
 import { Korean } from "korean"
 import { Kospi } from "kospi"
+import { Kospi2 } from "kospi2"
 
 // style={{textAlign: "center"}}
 
@@ -52,7 +53,7 @@ const Home = () => {
                 <Route path="/naver" element={<NaverMovie/>}></Route>
                 <Route path="/imdb" element={<NaverMovieReview/>}></Route>
                 <Route path="/korean" element={<Korean/>}></Route>
-                <Route path="/aitrader" element={<Kospi/>}></Route>
+                <Route path="/aitrader" element={<Kospi2/>}></Route>
 
                 <Route path="/login" element={<Login/>}></Route>
                 <Route path="/signup" element={<SignUp/>}></Route>

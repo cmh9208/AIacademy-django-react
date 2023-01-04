@@ -84,12 +84,39 @@ class DnnModel(AiTraderModel):
         # for i in range(5):
         #     print('종가 : ', y_test[i], '/ 예측가 : ', y_pred[i])
 
-        print('종가 : ', y_test[i], '/ 예측가 : ', y_pred[i])
+
+        # print('종가 : ', y_test[i], '/ 예측가 : ', y_pred[i])
+
+
+        df = pd.read_csv(r'C:\Users\최민호\PycharmProjects\AIacademy-django-react\djangoProject\aitrader\data\samsung.csv')
+        df2 = df[df['날짜'] == i]
+        i = df2.index
+        i = i[0]
+
+
         a, b = y_test[i], y_pred[i]
+        a1, b1 = y_test[i-1], y_pred[i-1]
+        a2, b2 = y_test[i-2], y_pred[i-2]
+        a3, b3 = y_test[i-3], y_pred[i-3]
+        a4, b4 = y_test[i-4], y_pred[i-4]
+
         a, b = str(a[0]), str(b[0])
-        print(a, b)
-        print(type(a), type(b))
-        return f'종가 : {a}, / 예측가 : {b}'
+        a1, b1 = str(a1[0]), str(b1[0])
+        a2, b2 = str(a2[0]), str(b2[0])
+        a3, b3 = str(a3[0]), str(b3[0])
+        a4, b4 = str(a4[0]), str(b4[0])
+
+        # print(a, b)
+        # print(type(a), type(b))
+        result = [f'종가 : {a}, / 예측가 : {b}',
+                f'종가 : {a1}, / 예측가 : {b1}',
+                f'종가 : {a2}, / 예측가 : {b2}',
+                f'종가 : {a3}, / 예측가 : {b3}',
+                f'종가 : {a4}, / 예측가 : {b4}']
+
+        return result
+
+
 
 if __name__ == '__main__':
     # save_npy()
