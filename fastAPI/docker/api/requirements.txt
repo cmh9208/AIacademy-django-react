@@ -1,0 +1,5 @@
+mysqlclient
+sqlalchemy
+uvicorn
+fastapi
+pymysql

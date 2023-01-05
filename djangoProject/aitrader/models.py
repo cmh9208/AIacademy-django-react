@@ -175,8 +175,8 @@ class AiTraderModel(AiTradeBase):
         x2_test_scaled = scaler2.transform(x2_test)
         return x1_test_scaled, x1_train_scaled, x2_test_scaled, x2_train_scaled, y1_test, y1_train
 
-    def ensemble_fit(self, dense2, input1, input2, output1, x1_test_scaled, x1_train_scaled, x2_test_scaled,
-                     x2_train_scaled, y1_test, y1_train):
+    def ensemble_fit(self, dense2, input1, input2, output1, x1_test_scaled,
+                     x1_train_scaled, x2_test_scaled, x2_train_scaled, y1_test, y1_train):
         dense2 = Dense(64)(dense2)
         dense2 = Dense(64)(dense2)
         dense2 = Dense(64)(dense2)
@@ -302,10 +302,10 @@ class LstmEnsemble(AiTraderModel):
 
 if __name__ == '__main__':
     # save_npy()
-    # DnnModel().create()
+    DnnModel().create()
     # DnnEnsemble().create()
     # LstmModel().create()
-    LstmEnsemble().create()
+    # LstmEnsemble().create()
 
 '''
 DnnModel
