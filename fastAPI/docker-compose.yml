@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.8"
 
 services:
   db:
@@ -15,8 +15,8 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./docker/mysql/initdb.d:/docker-entrypoint-initdb.d
       - ./docker/mysql/conf.d:/etc/mysql/conf.d
+      - ./docker/mysql/initdb.d:/docker-entrypoint-initdb.d
 
     networks:
       - local-net
@@ -29,7 +29,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./code:/usr/src/server
+      - .:/app
     networks:
       - local-net
 networks:

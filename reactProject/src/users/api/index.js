@@ -1,6 +1,6 @@
 import axios from 'axios'
 export const server = "http://127.0.0.1:8000/"
-export const userLogin = req =>axios.post(`${server}users/login`, req)
+export const userLogin = req =>axios.get(`${server}users/login`, req)
 
 export const userSinup = req =>axios.post(`${server}users/user`, req)
 
