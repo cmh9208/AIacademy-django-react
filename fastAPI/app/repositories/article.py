@@ -1,35 +1,39 @@
-from app.database import engine, conn
 from app.models.article import Article
-import pymysql
-from sqlalchemy.orm import sessionmaker
+
 from sqlalchemy.orm import Session
-pymysql.install_as_MySQLdb()
 
-def join(item: Article, db: Session):
+
+
+def find_articles(page,db: Session):
+    print(f"page number is {page}")
+    return db.query(Article).all()
+
+def join(item, db):
     return None
 
-def login(id: str, item: Article, db: Session):
+
+def login(id, item, db):
     return None
+
 
 def update(id, item, db):
     return None
 
-def delete(id, item, db):
+
+def delte(id, item, db):
     return None
 
-
-def find_articlese(page:int, db: Session):
-    print(f" page number is {page}")
-    return db.query(Article).all()
-
-def find_articlese_legacy():
-    cursor = conn.cursor()
-    sql = "select * from articlese"
-    cursor.execute(sql)
-    return cursor.fetchall()
 
 def find_article(id, db):
     return None
 
-def find_articlese_by_job(search, page, db):
+
+def find_articles_by_job(search, page, db):
+    return None
+
+
+
+
+
+def find_article_by_title(search, page, db):
     return None

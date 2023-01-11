@@ -22,6 +22,7 @@
     "@fullcalendar/timegrid": "^5.11.0",
     "@fullhuman/postcss-purgecss": "^4.1.3",
     "@hookform/resolvers": "^2.8.10",
+    "@material-ui/styles": "^4.11.5",
     "@mui/core": "^5.0.0-alpha.54",
     "@mui/icons-material": "^5.8.0",
     "@mui/lab": "^5.0.0-alpha.83",

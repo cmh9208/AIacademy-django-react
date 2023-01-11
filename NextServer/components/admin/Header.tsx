@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-const Header = () => {
+export default function Header(){
     return (
       <><header>
         {/* <Navigation/><br/> 
@@ -28,4 +28,3 @@ const HR = styled.hr`
   border: 1px solid black;
   text-align: center;
 `
-  export default Header

@@ -1,48 +1,41 @@
 from fastapi import APIRouter, Depends
-from sqlalchemy.orm import Session
-# (dto, vo, dao) dao 데이터에 접근하는 객체
 import app.repositories.article as dao
-from app.database import get_db
+from sqlalchemy.orm import Session
 from app.schemas.article import Article
+from app.database import get_db
 
 router = APIRouter()
+
 
 @router.post("/")
 async def write(item: Article, db: Session = Depends(get_db)):
     article_dict = item.dict()
-    print(f"SignUp Inform : {article_dict}")
-    dao.join(item, db)
-    return {"data": "success"}
-
-@router.post("/{id}")
-async def login(id:str,item: Article, db: Session = Depends(get_db)):
-    dao.login(id, item, db)
-    return {"data": "success"}
+    print((f"SignUp Inform : {article_dict}"))
+    dao.join(item=item,db=db)
+    return {"data":"sucess"}
 
 @router.put("/{id}")
-async def update(id:str, item: Article, db: Session = Depends(get_db)):
-    dao.update(id,item,db)
-    return {"data": "success"}
+async def update(id:str,item: Article, db: Session = Depends(get_db)):
+    dao.update(id=id,item=item,db=db)
+    return {"data":"sucess"}
 
 @router.delete("/{id}")
-async def delete(id:str, item: Article, db: Session = Depends(get_db)):
-    dao.delete(id,item,db)
-    return {"data": "success"}
+async def delete(id:str,user: Article, db: Session = Depends(get_db)):
+    dao.delte(id=id,item=user,db=db)
+    return {"data":"sucess"}
 
+## Q
 @router.get("/{page}")
-async def get_articles(page: int, db: Session = Depends(get_db)):
-    ls = dao.find_articlese(page,db)
+async def get_articles(page, db: Session = Depends(get_db)):
+    ls = dao.find_articles(page,db)
     return {"data": ls}
 
 @router.get("/email/{id}")
-async def get_article(id: str, db: Session = Depends(get_db)):
-    dao.find_article(id, db)
-    return {"data": "success"}
+async def get_article(id : str,db: Session = Depends(get_db)):
+    dao.find_article(id=id,db=db)
+    return {"data": "sucess"}
 
 @router.get("/job/{search}/{no}")
-async def get_articlese_by_job(search:str, page: int, db: Session = Depends(get_db)):
-    dao.find_articlese_by_job(search, page,db)
-    return {"data": "success"}
-
-
-
+async def get_articles_by_title(search: str, page: int, db: Session = Depends(get_db)):
+    dao.find_article_by_title(search,page,db)
+    return {"data":"sucess"}

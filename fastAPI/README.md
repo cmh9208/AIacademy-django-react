@@ -25,7 +25,6 @@ Create a Base class
 declarative_base함수로 부터 Base클래스를 리턴받음
 나중에 객체를 테이블로 맵핑하는 ORM model이 된다
 
-grant all privileges on *.* to 'root'@'%' identified by 'root';
 
 # create table posts(
 #     post_id int(10) AUTO_INCREMENT primary key,
@@ -34,3 +33,11 @@ grant all privileges on *.* to 'root'@'%' identified by 'root';
 #     create_at datetime(20),
 #     updated_at datetime(20)
 # )charset = utf8;
+
+object 종류
+dao - repositories
+dto - schemas
+vo - models
+
+db권한주기 : mysql -u root -p 다음
+grant all privileges on *.* to 'root'@'%' identified by 'root';

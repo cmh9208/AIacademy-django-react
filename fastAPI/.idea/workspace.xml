@@ -2,40 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31e5b3c2-eae4-4f04-beda-51ff62fed438" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/repositories/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/article.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/mixins.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repositories/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repositories/article.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/repositories/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/article.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/article.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../react-fast/.idea/multiplex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/components/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/components/user/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/components/user/SignUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/UserList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/components/user/UserList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fastAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fastAPI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/25fe2c9a-7b4b-4051-adb6-3548b79ed376.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/25fe2c9a-7b4b-4051-adb6-3548b79ed376.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/endpoints/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/endpoints/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/mixins.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/no.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/user_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/api/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/api/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/mysql/conf.d/my.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/mysql/conf.d/my.cnf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/mysql/initdb.d/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docker/mysql/initdb.d/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/mysql/initdb.d/testdata.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docker/mysql/initdb.d/testdata.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactProject/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactProject/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactProject/.idea/multiplex.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactProject/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reactProject/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/article.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/article.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/article.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +172,8 @@
       <workItem from="1673316188663" duration="173000" />
       <workItem from="1673316446741" duration="16009000" />
       <workItem from="1673378120319" duration="318000" />
+      <workItem from="1673378814582" duration="1960000" />
+      <workItem from="1673396839452" duration="14006000" />
     </task>
     <servers />
   </component>

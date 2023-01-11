@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector} from '@/hooks'
 import { increment, decrement, 
      incrementAsync, selectCount } from '@/modules/counter/counterSlice'
 
-export function Counter() {
+export default function Counter() {
     const count = useAppSelector(selectCount);
     const dispatch = useAppDispatch();
     const [incrementAmount, setIncrementAmount] = useState('2');
