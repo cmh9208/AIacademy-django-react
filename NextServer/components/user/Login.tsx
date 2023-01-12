@@ -4,7 +4,8 @@ import {userLogin} from '@/pages/api';
 
 export default function Login(){
     return (
-        <><button
+        <>
+        <button
         onClick = { e => {
             e.preventDefault()
             userLogin()
