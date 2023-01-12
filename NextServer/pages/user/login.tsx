@@ -1,5 +1,7 @@
 import { NextPage } from "next"
 import { Login,  GoogleLogin} from "@/components/user"
+import React from 'react';
+
 
 
 const LoginPage: NextPage = function(){
@@ -16,3 +18,5 @@ const LoginPage: NextPage = function(){
  );
 }
 export default LoginPage
+
+
