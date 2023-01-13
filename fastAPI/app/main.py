@@ -12,8 +12,7 @@ baseurl = os.path.dirname(os.path.abspath(__file__))
 from fastapi import FastAPI, APIRouter
 from .routers.user import router as user_router
 from .routers.article import router as article_router
-from datetime import datetime
-
+from fastapi.middleware.cors import CORSMiddleware
 print(f" ################ app.main Started At {current_time()} ################# ")
 
 
@@ -21,6 +20,15 @@ router = APIRouter()
 router.include_router(user_router, prefix="/users",tags=["users"])
 router.include_router(article_router, prefix="/articles",tags=["articles"])
 app = FastAPI()
+origins = ["http://localhost:3000"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+app.router.redirect_slashes = False
 app.include_router(router)
 app.add_middleware(DBSessionMiddleware, db_url=DB_URL)
 
@@ -38,7 +46,3 @@ async def root():
 @app.get("/hello/{name}")
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}
-
-# @app.post("/login")
-# async def login_test():
-#     return print('성공'*30)
