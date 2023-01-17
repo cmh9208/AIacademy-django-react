@@ -1,8 +1,9 @@
 export interface Article{
-    art_seq? : number
-    title : string
-    content : string
-    create_at? : string
-    updated_at? : string
-    user_id : string
+    artseq? : number
+    title? : string
+    content? : string
+    created? : string
+    modified? : string
+    userid? : string
+    username? : string
 }

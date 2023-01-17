@@ -2,23 +2,26 @@ import os
 import sys
 import logging
 from fastapi_sqlalchemy import DBSessionMiddleware
-
+from starlette.responses import HTMLResponse
 from .admin.utils import current_time
 from .env import DB_URL
-from app.database import Base, engine, init_db
-
+from app.database import init_db
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 baseurl = os.path.dirname(os.path.abspath(__file__))
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, Depends, HTTPException
 from .routers.user import router as user_router
 from .routers.article import router as article_router
+from .test.user import router as test_router
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import APIKeyHeader
+API_TOKEN = "SECRET_API_TOKEN"
+api_key_header = APIKeyHeader(name="Token")
 print(f" ################ app.main Started At {current_time()} ################# ")
-
 
 router = APIRouter()
 router.include_router(user_router, prefix="/users",tags=["users"])
 router.include_router(article_router, prefix="/articles",tags=["articles"])
+router.include_router(test_router, prefix="/test",tags=["test"])
 app = FastAPI()
 origins = ["http://localhost:3000"]
 app.add_middleware(
@@ -35,13 +38,27 @@ app.add_middleware(DBSessionMiddleware, db_url=DB_URL)
 logging.basicConfig()
 logging.getLogger("sqlalchemy.engine").setLevel(logging.INFO)
 
+@app.get("/")
+async def home():
+    return HTMLResponse(content=f"""
+        <body>
+        <div>
+            <h1 style="width:400px;margin:50px auto">
+                { current_time()} <br/>
+                현재 서버 구동 중 입니다. 
+             </h1>
+        </div>
+        </body>
+            """)
+
+@app.get("/protected-router")
+async def protected_route(token: str = Depends(api_key_header)):
+    if token != API_TOKEN:
+        raise HTTPException(status_code=403)
+
 @app.on_event("startup")
 async def on_startup():
     await init_db()
-
-@app.get("/")
-async def root():
-    return {"message ": " Welcome Fastapi"}
 
 @app.get("/hello/{name}")
 async def say_hello(name: str):

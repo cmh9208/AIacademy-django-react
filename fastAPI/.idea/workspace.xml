@@ -2,77 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31e5b3c2-eae4-4f04-beda-51ff62fed438" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/services/article.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/apis/userApi.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/Home.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Footer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Navbar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/enums.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Add.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Detail.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/List.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Remove.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Update.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/counter/Counter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Detail.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/FindEmail.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/FindPassword.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/GoogleLogin.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Join.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/List.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Login.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Logout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Remove.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Update.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/hooks/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/counter/counterAPI.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/counter/counterSlice.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/counter/counterSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/store.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/users/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/users/userAPI.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/_app.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/_document.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/api/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/counter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/user/join.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/user/list.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/user/login.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/sagas/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/sagas/userSagas.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/styles/Home.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/styles/counter/Counter.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/AIacademy-django-react.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bases/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bases/article.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bases/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cruds/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cruds/article.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cruds/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/test/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/admin/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/admin/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/article/Add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/article/Add.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/user/GoogleLogin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/user/GoogleLogin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/user/Join.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/user/Join.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/user/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/user/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/user/LoginHome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/user/LoginHome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/user/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/user/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/apis/articleAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/apis/articleAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/apis/userAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/apis/userAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/controllers/articleController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/controllers/articleController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/controllers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/controllers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/sagas/userSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/sagas/userSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/slices/articleSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/slices/articleSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/slices/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/slices/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/slices/userSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/slices/userSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/types/Article.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/types/Article.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/types/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/types/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/pages/loginHome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/pages/loginHome/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/pages/user/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/pages/user/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a65157d2-0693-457f-a397-a482835f37c0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a65157d2-0693-457f-a397-a482835f37c0/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a65157d2-0693-457f-a397-a482835f37c0/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a65157d2-0693-457f-a397-a482835f37c0/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a65157d2-0693-457f-a397-a482835f37c0/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91f0462d-d35f-41d5-a351-3833ffb91325.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91f0462d-d35f-41d5-a351-3833ffb91325/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91f0462d-d35f-41d5-a351-3833ffb91325/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91f0462d-d35f-41d5-a351-3833ffb91325/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91f0462d-d35f-41d5-a351-3833ffb91325/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/endpoints/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/endpoints/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repositories/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/security.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/article.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/article.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/schemas/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/article.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/user_service.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/api/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/api/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/mysql/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/mysql/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/mysql/conf.d/my.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/mysql/conf.d/my.cnf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +209,13 @@
       <workItem from="1673558960218" duration="1750000" />
       <workItem from="1673569451410" duration="5935000" />
       <workItem from="1673586012980" duration="11606000" />
+      <workItem from="1673801794597" duration="1911000" />
+      <workItem from="1673834588246" duration="1424000" />
+      <workItem from="1673836053889" duration="194000" />
+      <workItem from="1673836261448" duration="15950000" />
+      <workItem from="1673865915575" duration="4994000" />
+      <workItem from="1673915211975" duration="4440000" />
+      <workItem from="1673923290726" duration="2204000" />
     </task>
     <servers />
   </component>

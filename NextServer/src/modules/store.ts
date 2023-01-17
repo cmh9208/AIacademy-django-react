@@ -29,7 +29,7 @@ const rootReducer = (
 const makeStore = () =>{
     const store = 
     configureStore({
-        reducer:{ rootReducer },
+        reducer:{ user : userReducer },
         middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({serializableCheck: false})
             .prepend(sagaMiddleware)
@@ -46,5 +46,5 @@ const store = rootReducer;
 export type AppState = ReturnType<typeof rootReducer>;
 export type AppDispatch = ReturnType<typeof store>["dispatch"];
 export const useAppSelector: TypedUseSelectorHook<AppState> = useSelector;
-export const wrapper = createWrapper(makeStore)
+export const wrapper = createWrapper(makeStore, {debug: isDev})
 export default store;

@@ -36,3 +36,4 @@ export const imageUpload = axios.create({
 })
 
 export * from '../apis/userAPI';
+export * from '../apis/articleAPI';

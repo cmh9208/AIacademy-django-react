@@ -8,16 +8,15 @@ export const user = {
     async join(payload: User){
             try{
                 const response : AxiosResponse<any, User[]> =
-                await axios.post(`http://localhost:8000/users/join`, payload, {headers: {
+                await axios.post(`http://localhost:8000/users/register`, payload, {headers: {
                     "Content-Type" : "application/json",
                     Authorization: "JWT fefege...",
                 }})
-                if(response.data === "failure"){
-                    alert(' 결과: API 내부 join 실패  ')
-                }else{
+                if(response.data === "success"){
                     alert(' 결과: API 내부 join 성공  '+ JSON.stringify(response.data))
+                }else{
+                    alert(` 결과: ${response.data.msg}  `)
                 }
-                
                 return response
             }catch(err){
                 console.log(` ${currentTime} : userSaga 내부에서 join 실패 `)
@@ -26,10 +25,11 @@ export const user = {
     async login(payload: User){
         try{
             const response : AxiosResponse<any, User[]> =
-            await author.post('/users/login', payload)
-            alert(` 서버에서 리턴받은 값: ${JSON.stringify(response.data)}`)
-            localStorage.setItem("loginUser", JSON.stringify(response.data))
-            //return response.data
+            await author.post('http://localhost:8000/users/login', payload)
+            alert(`4 API payload is ${JSON.stringify(response.data)}`)
+            localStorage.clear()
+            localStorage.setItem("session", JSON.stringify(response.data))
+            return response.data
         }catch(err){
             return err;
         }
