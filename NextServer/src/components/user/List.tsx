@@ -10,10 +10,9 @@ export default function UserList(){
                 </tr>
             </thead>
             <tbody>
-            
+                 
             </tbody>
         </table>
     </>
 }
-
 

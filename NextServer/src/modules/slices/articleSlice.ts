@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
 import { Article } from '@/modules/types'
 
 type ArticleState = {
@@ -18,10 +18,8 @@ const articleSlice = createSlice({
     name: 'articleSlice',
     initialState,
     reducers: {
-        writeRequest(state: ArticleState, action: PayloadAction<Article>){
-            alert(`2 joinRequest ${JSON.stringify(action.payload)}`)
+        writeRequest(state: ArticleState, _payload){
             state.status = 'loading'
-            state.error = null
         },
         writeSuccess(state: ArticleState, {payload}){
             state.status = 'idle'

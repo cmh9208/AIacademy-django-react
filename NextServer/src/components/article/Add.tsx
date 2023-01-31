@@ -1,58 +1,74 @@
-import { useDispatch } from "react-redux"
-import {  writeRequest } from "@/modules/slices"
 import { SubmitHandler, useForm} from "react-hook-form"
-import { Article } from "@/modules/types";
+import { Article } from "@/modules/types"
 import { useRef } from "react"
+import { useDispatch } from "react-redux"
+import { writeRequest } from "@/modules/slices"
+import styled from 'styled-components';
 
-export default function Add() {
+export default function AddArticle() { 
     const dispatch = useDispatch()
-    const { register, handleSubmit, formState: { errors }  } = useForm<Article>()
+    const { register, handleSubmit, watch, formState: { errors }  } = useForm<Article>()
     const onSubmit: SubmitHandler<Article> = data => {
-      alert(`1 - 리액트에 입력된 글 정보 : ${JSON.stringify(data)}`)
       dispatch(writeRequest(data))
     };
-
-   
-   return(<>
-    <form onSubmit={handleSubmit(onSubmit)} method="post">
-    <label htmlFor="title">타이틀 :</label>
-          <input 
-          {...register("title", { 
+    return (<>
+        
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Sheet >
+            <thead>
+              <Row>
+                <Cell colSpan={2}><h6>게시판 글쓰기</h6></Cell>
+              </Row>
+            </thead>
+            <tbody>
+              <Row>
+                <Cell>
+                <label htmlFor="title">제 목</label></Cell>
+                <Cell><Input type="text"  id="title" name="title" 
+            placeholder="제목"
+            required minLength= {10} maxLength={20}/> <br/>
             
-            maxLength: {
-                value: 100,
-                message: "100자 이하로 입력해주세요"
-            }
-        })}
-          type="text" id="title" name="title" /> <br/>
+            {errors.title && <p>{errors.title.message}</p>} </Cell></Row>
+            <Row><Cell>
+          <label htmlFor="username">글쓴이</label></Cell>
+          <Cell><Input type="text" 
+            placeholder="글쓴이 Email"
+            id="username" name="username" required /> 
+                </Cell>
+              </Row>
+             
+              <Row>
+                <Cell>
+                <label htmlFor="content">글내용</label></Cell><Cell>
+          <Input type="text" id="content" name="content" 
+          placeholder="글내용"
+          required /> </Cell>
+              </Row>
+              
+              
+              <Row>
+                <Cell colSpan={2}><button type="submit" >전송</button></Cell>
+              </Row>
+              
+            </tbody>
+          </Sheet>
 
-    <label htmlFor="content">내용 :</label>
-              <input 
-              {...register("content", { 
-                
-                maxLength: {
-                    value: 1000,
-                    message: "1000자 이하로 입력해주세요"
-                }
-            })}
-              type="text" id="content" name="content" /> <br/>
-  
-  <label htmlFor="userid">아아디 :</label>
-              <input 
-              {...register("userid", { 
-                
-                maxLength: {
-                    value: 30,
-                    message: "30자 이하로 입력해주세요"
-                }
-            })}
-              type="text" id="userid" name="userid" /> <br/>
-  
-      <button type="submit" >전송</button>
+          
+          </form> 
+        </>)
 
+    }
 
-    </form>
-    
-    </>)
-}
-
+const Sheet = styled.table`
+border: 1px solid black
+width: 70%
+`
+const Row = styled.tr`
+border: 1px solid black
+`
+const Cell = styled.td`
+border: 1px solid black,
+`
+const Input = styled.input`
+width: 100%
+`

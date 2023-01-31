@@ -1,20 +1,17 @@
 import React from 'react';
+import Navbar from './Navbar';
+import NavbarAuth from './NavbarAuth';
 import styled from 'styled-components'
+import { useEffect, useState } from "react";
+
 export default function Header(){
+  const  [token, setToken] = useState("")
+  useEffect(() => {
+    setToken(localStorage.getItem('session')||"")
+  }, [])
     return (
       <><header>
-        {/* <Navigation/><br/> 
-        <HR/>
-        {localStorage.length > 0 ?
-        <div>
-            <Span>{JSON.parse(window.localStorage.getItem('sessionUser')).name}님 접속중 
-            <Logout/></Span> 
-        </div>
-        : <>
-        <Span><button onClick = {e => window.location.href = `/users/add`}>회원가입</button>
-        <button onClick = {e => window.location.href = `/users/login`}>로그인</button></Span>
-        </>}*/}
-        
+        {token === "" ? <Navbar/> : <NavbarAuth/>}
       </header>
       </>
     )

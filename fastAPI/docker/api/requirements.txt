@@ -9,3 +9,6 @@ fastapi-sqlalchemy
 pyjwt==2.4.0
 shortuuid==1.0.11
 passlib
+fastapi-pagination
+faker
+mangum

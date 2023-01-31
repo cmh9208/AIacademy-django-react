@@ -9,7 +9,7 @@ class User(Base, TimestampMixin): # Base
 
     __tablename__="users"
 
-    userid = Column(String(30), primary_key=True, default=myuuid())
+    userid = Column(String(30), primary_key=True)
     email = Column(String(50), unique=True, nullable=False)
     password = Column(String(100), nullable=False)
     username = Column(String(20), nullable=False)
@@ -18,7 +18,7 @@ class User(Base, TimestampMixin): # Base
     address = Column(String(100))
     job = Column(String(20))
     interests = Column(String(100))
-    token = Column(String(100))
+    token = Column(String(256))
 
     articles = relationship('Article', back_populates='user')
 

@@ -11,7 +11,7 @@ const isDev = process.env.NODE_ENV ==='development'
 const sagaMiddleware = createSagaMiddleware()
 
 const combinedReducer = combineReducers({
-    user: userReducer,
+    user: userReducer
 })
 const rootReducer = (
 	state: ReturnType<typeof combinedReducer>,
